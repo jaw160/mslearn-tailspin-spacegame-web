@@ -7,7 +7,7 @@ trigger:
 - main
 
 pool:
-  name: HOTH # your job runs on an agent in this pool
+  name: default
 
 variables:
   buildConfiguration: 'Release'
