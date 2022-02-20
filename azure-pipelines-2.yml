@@ -7,7 +7,7 @@ trigger:
 - main
 
 pool:
-  vmImage: ubuntu-latest
+  name: HOTH # your job runs on an agent in this pool
 
 variables:
   buildConfiguration: 'Release'
