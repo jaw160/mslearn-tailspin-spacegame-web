@@ -4,6 +4,7 @@ trigger:
 pool:
   name: default
 <<<<<<< HEAD
+<<<<<<< HEAD
   demands:
 =======
 >>>>>>> 2752335a22b9335a7fd7e387066c23d77add6a67
@@ -11,12 +12,19 @@ pool:
 
 variables:
   buildConfiguration: 'Release'
+=======
+  demands:
+  - npm
+>>>>>>> f06c20b03927c91f3464a64c44a458c4c2697d16
 
 steps:
 - task: UseDotNet@2
   displayName: 'Use .NET SDK 5.x'
   inputs:
+<<<<<<< HEAD
     packageType: sdk
+=======
+>>>>>>> f06c20b03927c91f3464a64c44a458c4c2697d16
     version: '5.x'
 
 - task: Npm@1
@@ -46,10 +54,15 @@ steps:
     command: 'build'
     arguments: '--no-restore --configuration Release'
 <<<<<<< HEAD
+<<<<<<< HEAD
     projects: '**/*.csproj'
 =======
     projects: '**/*.csproj'
     
+=======
+    projects: '**/*.csproj'
+
+>>>>>>> f06c20b03927c91f3464a64c44a458c4c2697d16
 - task: DotNetCoreCLI@2
   displayName: 'Publish the project - Release'
   inputs:
@@ -61,5 +74,9 @@ steps:
 
 - task: PublishBuildArtifacts@1
   displayName: 'Publish Artifact: drop'
+<<<<<<< HEAD
   condition: succeeded()
 >>>>>>> 2752335a22b9335a7fd7e387066c23d77add6a67
+=======
+  condition: succeeded()
+>>>>>>> f06c20b03927c91f3464a64c44a458c4c2697d16
