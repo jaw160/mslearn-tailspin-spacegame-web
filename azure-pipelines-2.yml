@@ -2,7 +2,7 @@ trigger:
 - '*'
 
 pool:
-  name: default
+  name: HOTH
   demands:
   - npm
 
@@ -20,7 +20,7 @@ steps:
 - script: './node_modules/.bin/node-sass Tailspin.SpaceGame.Web/wwwroot --output Tailspin.SpaceGame.Web/wwwroot'
   displayName: 'Compile Sass assets'
 
-- task: gulp@1
+- script: 'C:\temp\npm\gulp'
   displayName: 'Run gulp tasks'
 
 - script: 'echo "$(Build.DefinitionName), $(Build.BuildId), $(Build.BuildNumber)" > buildinfo.txt'
@@ -52,3 +52,4 @@ steps:
 - task: PublishBuildArtifacts@1
   displayName: 'Publish Artifact: drop'
   condition: succeeded()
+
