@@ -7,7 +7,7 @@ trigger:
 - '*'
 
 pool:
-  name: default
+  name: HOTH
   demands:
   - npm
 
