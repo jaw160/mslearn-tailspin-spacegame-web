@@ -19,7 +19,7 @@ steps:
     packageType: sdk
     version: '5.x'
 
-- task: Npm@1
+- script: 'C:\Program Files\nodejs\npm.cmd' 
   displayName: 'Run npm install'
   inputs:
     verbose: false
