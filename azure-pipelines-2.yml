@@ -17,11 +17,7 @@ steps:
   displayName: 'Use .NET SDK 5.x'
   inputs:
     packageType: sdk
-    version: '5.x'
-
-- script: |
-    npm install
-  displayName: 'npm install'
+    version: '5.x''
 
 - task: NodeTool@0
   inputs:
