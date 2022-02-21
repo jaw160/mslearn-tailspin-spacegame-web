@@ -9,6 +9,7 @@ trigger:
 pool:
   name: default
   demands:
+  - agent.name -equals HOTHv22002
   - npm
 
 variables:
