@@ -6,10 +6,15 @@
 trigger:
 - '*'
 
+strategy:
+  matrix:
+    HOTHv22002:
+      AGENT_NAME: 'HOTHv22002'
+      
 pool:
   name: default
   demands:
-  - agent.name -equals HOTHv22002
+  - agent.name -equals $(AGENT_NAME)
   - npm
 
 variables:
