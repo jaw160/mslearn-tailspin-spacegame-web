@@ -19,7 +19,7 @@ steps:
     packageType: sdk
     version: '5.x'
 
-- script: 'C:\Program Files\nodejs\npm.cmd' 
+- script: '"C:\Program Files\nodejs\npm.cmd"' 
   displayName: 'Run npm install'
 
 - script: './node_modules/.bin/node-sass Tailspin.SpaceGame.Web/wwwroot --output Tailspin.SpaceGame.Web/wwwroot'
